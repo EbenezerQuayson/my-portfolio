@@ -404,7 +404,15 @@ article .icon {
 
 #projects {
   position: relative;
+
 }
+
+#projects .about-containers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
 
 .color-container {
   border-color: var(--container-border-color);
