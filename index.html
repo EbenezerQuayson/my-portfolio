@@ -1,558 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ebenezer Quayson</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">EPKQ</div>
-      <div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ebenezer Quayson — Software Engineer</title>
+  <meta name="description"
+    content="Portfolio of Ebenezer Quayson, a passionate software engineer specializing in full-stack web development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <!-- ========== DESKTOP NAV ========== -->
+  <nav id="desktop-nav">
+    <div class="logo">EPKQ</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience & Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <label class="switch" aria-label="Toggle dark mode">
+          <input type="checkbox" id="darkModeToggle" />
+          <span class="slider">
+            <svg class="toggle-icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="toggle-icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </span>
+        </label>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HAMBURGER NAV ========== -->
+  <nav id="hamburger-nav">
+    <div class="logo">EPKQ</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0"
+        onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience & Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <li>
+          <a>
+            <label class="switch" aria-label="Toggle dark mode">
+              <input type="checkbox" id="darkModeToggleRes" />
+              <span class="slider">
+                <svg class="toggle-icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg class="toggle-icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              </span>
+            </label>
+          </a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO / PROFILE ========== -->
+  <section id="profile">
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Ebenezer Quayson</h1>
+      <p class="section__text__p2"><span class="typing-text"></span><span class="cursor">|</span></p>
+      <div class="btn-container">
+        <!-- <a href="#" class="btn btn-color-1">
+          Download CV
+        </a> -->
+        <a href="#contact" class="btn btn-color-2">
+          Contact Info
+        </a>
+      </div>
+      <div id="socials-container">
+        <a href="https://linkedin.com/in/ebenezer-quayson-b7383a285" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn profile">
+          <img src="./assets/linkedin.png" data-light="./assets/linkedin.png" data-dark="./assets/linkedin-white.png"
+            alt="LinkedIn" class="icon" />
+        </a>
+        <a href="https://github.com/EbenezerQuayson/" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub profile">
+          <img src="./assets/github.png" data-light="./assets/github.png" data-dark="./assets/github-white.png"
+            alt="GitHub" class="icon" />
+        </a>
+      </div>
+    </div>
+    <div class="section__pic-container">
+      <img src="./assets/headshot.png" alt="Ebenezer Quayson profile picture" />
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/myphoto2.jpg" alt="Ebenezer Quayson casual photo" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" data-light="./assets/experience.png"
+              data-dark="./assets/experience-white.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Full Stack Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" data-light="./assets/education.png"
+              data-dark="./assets/education-white.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Sc. Software Engineering</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I am a multi-disciplinary creator who thrives at the intersection of software engineering, robotics, and the
+            creative arts. As a Full-Stack Developer, I specialize in building scalable backend architectures and
+            multi-platform applications using React, Python, Node.js, and PostgreSQL.
+          </p>
+          <p>
+            My engineering journey extends beyond the screen into physical systems. As a Robotics Instructor with
+            STEMbees and a mentor for the FIRST Global Challenge, I teach and build using Java, Python, Arduino, and 3D
+            printing. This hands-on hardware experience deeply influences how I write software, teaching me to build
+            robust, fault-tolerant systems.
+          </p>
+          <p>
+            When I am not writing code or wiring circuits, I am immersed in music. I play the keyboard and my 5-string
+            bass guitar, and I frequently look for ways to merge my love for music with technology by architecting
+            audio-focused software applications. I am driven by a desire to innovate, educate, and build solutions that
+            leave a lasting impact.
+          </p>
+        </div>
+      </div>
+    </div>
+    <a href="#experience" class="arrow-link" aria-label="Go to Experience section">
+      <img src="./assets/arrow.png" data-light="./assets/arrow.png" data-dark="./assets/arrow-white.png"
+        alt="Navigate to Experience" class="icon arrow" />
+    </a>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience & Leadership</h1>
+    <div class="experience-details-container">
+
+      <div class="technical-arsenal">
+        <h2 class="experience-sub-title arsenal-title">Technical Arsenal</h2>
+        <div class="skills-badges">
+          <span class="skill-badge">HTML / CSS</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">React & React Native</span>
+          <span class="skill-badge">Node.js</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">PHP</span>
+          <span class="skill-badge">Java</span>
+          <span class="skill-badge">Arduino</span>
+          <span class="skill-badge">SQL (Postgres & MySQL)</span>
+          <span class="skill-badge">TypeScript</span>
+          <span class="skill-badge">Git & Version Control</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <!-- Present -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Present</h3>
+            <h4>Full-Stack Developer</h4>
+            <p>Architecting and deploying multi-platform web and mobile applications, integrating complex databases, and
+              exploring AI-driven solutions.</p>
+          </div>
+        </div>
+        <!-- 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>2025</h3>
+            <h4>Robotics Mentor, FIRST Global Challenge & Instructor at STEMbees</h4>
+            <p>Mentored students for international technical competition and taught comprehensive robotics curriculums,
+              heavily utilizing Java and Python to program autonomous functions and physical mechanisms.</p>
+          </div>
+        </div>
+        <!-- 2023 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>2023</h3>
+            <h4>Participant, FIRST Global Challenge</h4>
+            <p>Represented my team on the global stage, gaining intensive, hands-on experience in rapid prototyping,
+              hardware integration, and collaborative problem-solving under pressure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#projects" class="arrow-link" aria-label="Go to Projects section">
+      <img src="./assets/arrow.png" data-light="./assets/arrow.png" data-dark="./assets/arrow-white.png"
+        alt="Navigate to Projects" class="icon arrow" />
+    </a>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="projects-grid">
+        <!-- Todo List -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Todo-list.png" alt="Todo List application screenshot" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Todo List</h2>
+          <p class="project-description">A clean, interactive task management application built to demonstrate state
+            management and dynamic UI updates.</p>
+          <div class="btn-container">
+            <!--
+              <a
+                href="https://github.com/EbenezerQuayson/todo-list"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-color-1 project-btn"
+              >
+                Github
+              </a>
+              -->
+            <a href="https://todo-list-dolimstm2-ebenezer-quaysons-projects.vercel.app/" target="_blank"
+              rel="noopener noreferrer" class="btn btn-color-2 project-btn">
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- StatusShelf -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/StatusShelf.png" alt="StatusShelf application screenshot" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">StatusShelf</h2>
+          <p class="project-description">A utility platform allowing businesses to turn their WhatsApp status into a
+            searchable product catalog with direct order links.</p>
+          <div class="btn-container">
+            <!--
+              <a
+                href="https://github.com/EbenezerQuayson/StatusShelf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-color-1 project-btn"
+              >
+                Github
+              </a>
+              -->
+            <a href="https://statusshelf.free.nf/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-color-2 project-btn">
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- EbenKart -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/ebenkart.png" alt="EbenKart e-commerce site screenshot" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">EbenKart</h2>
+          <p class="project-description">A full-featured e-commerce storefront with product categorization, shopping
+            cart functionality, and a responsive modern design.</p>
+          <div class="btn-container">
+            <!--
+              <a
+                href="https://github.com/EbenezerQuayson/EbenKart-Ecommerce-Site"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-color-1 project-btn"
+              >
+                Github
+              </a>
+              -->
+            <a href="https://sunny-kulfi-230526.netlify.app/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-color-2 project-btn">
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Currently Building Section -->
+    <h2 class="experience-sub-title" style="margin-top: 4rem; text-align: center;">Currently Building</h2>
+    <div class="experience-details-container">
+      <div class="projects-grid">
+        <!-- Melodio (WIP) -->
+        <div class="details-container color-container wip-card">
+          <div class="wip-badge">IN DEVELOPMENT</div>
+          <h2 class="experience-sub-title project-title">Melodio</h2>
+          <p class="project-description">
+            A multi-platform music education application, currently architecting the backend infrastructure with
+            Supabase to handle real-time audio and user progression.
+          </p>
+          <div class="btn-container">
+            <span class="btn btn-color-1 project-btn disabled" disabled>Coming Soon</span>
+          </div>
+        </div>
+
+        <!-- Audio Separation Tool (WIP) -->
+        <div class="details-container color-container wip-card">
+          <div class="wip-badge">IN DEVELOPMENT</div>
+          <h2 class="experience-sub-title project-title">Audio Separation Tool</h2>
+          <p class="project-description">
+            Experimenting with machine learning models and Python to build an application capable of isolating stems and
+            separating tracks from mixed audio files.
+          </p>
+          <div class="btn-container">
+            <span class="btn btn-color-1 project-btn disabled" disabled>Coming Soon</span>
+          </div>
+        </div>
+
+        <!-- GHOSTTEARS (WIP) -->
+        <div class="details-container color-container wip-card">
+          <div class="wip-badge">IN DEVELOPMENT</div>
+          <h2 class="experience-sub-title project-title">GHOSTTEARS</h2>
+          <p class="project-description">
+            A real-time multiplayer mobile word game featuring live game mechanics.
+          </p>
+          <div class="btn-container">
+            <span class="btn btn-color-1 project-btn disabled" disabled>Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#contact" class="arrow-link" aria-label="Go to Contact section">
+      <img src="./assets/arrow.png" data-light="./assets/arrow.png" data-dark="./assets/arrow-white.png"
+        alt="Navigate to Contact" class="icon arrow" />
+    </a>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="cta-card">
+      <h1 class="title cta-title">Ready to build something impactful together? Let's connect.</h1>
+      <div class="btn-container cta-btn-container">
+        <a href="mailto:papakyielekyikwabena@gmail.com" class="btn cta-btn">
+          Say Hello
+        </a>
+        <a href="https://linkedin.com/in/ebenezer-quayson-b7383a285" target="_blank" rel="noopener noreferrer"
+          class="btn cta-icon-btn" aria-label="LinkedIn profile">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#experience">Experience & Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <label class="switch">
-          <input type="checkbox" id="darkModeToggle">
-          <span class="slider"></span>
-          </label>
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">EPKQ</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          <li><a><label class="switch">
-          <input type="checkbox" id="darkModeToggleRes">
-          <span class="slider"></span>
-          </label></a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/headshot.png" alt="Ebenezer Quayson profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Ebenezer Quayson</h1>
-        <p class="section__text__p2">Software Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-1"
-            
-          >
-          <!-- onclick="window.open('./assets/resume-example.pdf')" -->
-            Download CV
-          </button>
-          <button class="btn btn-color-2" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            data-light="./assets/linkedin.png"
-            data-dark="./assets/linkedin-white.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com//in/ebenezer-quayson-b7383a285'" 
-          />
-          <img
-            src="./assets/github.png"
-            data-light="./assets/github.png"
-            data-dark="./assets/github-white.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/EbenezerQuayson/'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/myphoto2.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-data-light="./assets/experience.png"
-data-dark="./assets/experience-white.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Full Stack Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                data-light="./assets/education.png"
-                data-dark="./assets/education-white.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Software Engineering
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I'm Quayson Papa-Kyi Ebenezer,  a passionate and ambitious software engineering student with a strong interest in building practical solutions that make an impact.
-              My journey blends creativity with problem-solving, from designing intuitive user experiences to developing efficient backend systems.
-            </p>
-            <p>
-              I value integrity, continuous learning, and innovation, and I'm especially motivated by opportunities that allow me to contribute to Africa's technological growth. My work spans web development, app design, and software projects that combine both functionality and usability.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        data-light="./assets/arrow.png"
-        data-dark="./assets/arrow-white.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
+    <p>Copyright &#169;
+      <script>document.write(new Date().getFullYear())</script> Ebenezer Quayson. All Rights Reserved.
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
 
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React Native</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              
-                
-              <!-- <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article> -->
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-              <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL (PostgreSQL & MySQL)</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article> 
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  data-light="./assets/checkmark.png"
-                  data-dark="./assets/checkmark-white.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        data-light="./assets/arrow.png"
-        data-dark="./assets/arrow-white.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Todo-list.png"
-                alt="Todo List"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Todo List</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/EbenezerQuayson/todo-list'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://todo-list-dolimstm2-ebenezer-quaysons-projects.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/StatusShelf.png"
-                alt="Status Shelf"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">StatusShelf</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/EbenezerQuayson/StatusShelf'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://statusshelf.free.nf/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <!-- <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Expenses Tracker</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/EbenezerQuayson/expenses-tracker'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div> -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/ebenkart.png"
-                alt="EbenKart"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">EbenKart</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/EbenezerQuayson/EbenKart-Ecommerce-Site'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://sunny-kulfi-230526.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <!-- <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Chat Application</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Chat Application</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Chat Application</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-1 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div> -->
-        </div> 
-      </div>
-      <img
-        src="./assets/arrow.png"
-           data-light="./assets/arrow.png"
-        data-dark="./assets/arrow-white.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            data-light="./assets/email.png"
-            data-dark="./assets/email-white.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:papakyielekyikwabena@gmail.com">papakyielekyikwabena@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            data-light="./assets/linkedin.png"
-            data-dark="./assets/linkedin-white.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://linkedin.com//in/ebenezer-quayson-b7383a285">Ebenezer Quayson</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; <script>document.write(new Date().getFullYear())</script> Ebenezer Quayson. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
 </html>

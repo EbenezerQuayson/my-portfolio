@@ -23,11 +23,41 @@
   .experience-details-container {
     margin-top: 2rem;
   }
-  #profile,
+
+  /* Hero stacks vertically */
+  #profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  #profile .section__text {
+    text-align: center;
+    order: 2;
+    max-width: 100%;
+  }
+  #profile .section__pic-container {
+    order: 1;
+  }
+  #profile .title {
+    text-align: center;
+  }
+  #profile .section__text__p1 {
+    text-align: center;
+  }
+  #profile .btn-container {
+    justify-content: center;
+  }
+  #profile #socials-container {
+    justify-content: center;
+  }
+
   .section-container {
     display: block;
   }
-  .arrow {
+  .arrow-link {
     display: none;
   }
   section,
@@ -45,6 +75,26 @@
   .about-containers {
     margin-top: 0;
   }
+
+  /* Responsive Timeline */
+  .timeline::before {
+    left: 20px;
+    margin-left: 0;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  .timeline-dot {
+    left: 10px;
+  }
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 10px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -53,8 +103,13 @@
     height: 40vh;
   }
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
+  #profile .section__pic-container {
+    width: auto;
+    height: 46vw;
   }
   article {
     font-size: 1rem;
@@ -85,11 +140,6 @@
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
   }
   .section__text__p2 {
     font-size: 1.25rem;
