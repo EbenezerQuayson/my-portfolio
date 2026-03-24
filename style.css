@@ -214,6 +214,20 @@ a:hover {
   transform: none;
 }
 
+/* Dark Mode Overrides for Hamburger Menu */
+body.dark .menu-links {
+  background-color: var(--bg-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .menu-links a {
+  color: #ffffff;
+}
+
+body.dark .hamburger-icon span {
+  background-color: #ffffff;
+}
+
 /* ===========================
    SECTIONS
    =========================== */
